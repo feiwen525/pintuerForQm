@@ -41,8 +41,7 @@
                       <li><a href="#">头像</a></li>
                       <li><a href="#">签名 生活照</a></li>
                       <li><a href="#">个人信息</a></li>
-                      <li><a href="#">隐私设置</a></li>
-                      <li><a href="#">其他设置</a></li>
+                      <li><a href="#">隐私设置</a></li> 
                       <li><a href="#">实名认证</a></li>
                       <li><a href="#">我的二维码</a></li>
                       <li><a href="#">关于我们</a></li>
@@ -71,8 +70,7 @@
                               <li class="active"><a class="text-sub" href="#">头像设置</a></li>
                               <li><a href="#">签名&nbsp;生活照</a></li>
                               <li><a href="#">个人信息</a></li>
-                              <li><a href="#">隐私设置</a></li>
-                              <li><a href="#">其他设置</a></li>
+                              <li><a href="#">隐私设置</a></li> 
                               <li><a href="#">实名认证</a></li> 
                             </ul>
                     </div>
@@ -208,29 +206,55 @@
                               <div class="panel-head  border-sub bg-sub "><strong >隐私设置</strong>
                               		
                               </div>
-                              <div class="panel-body">面板内容
+                              <div class="panel-body">
+                              		<div class="form-group">
+                                        <label >是否允许别人看到我的历史动态</label>
+                                        <div class="field margin-big-left" style="display:inline">
+                                          <div class="button-group radio">
+                                            <label class="button button-little active"><input name="pintuer" value="yes" checked="checked" type="radio"><span class="icon icon-check"></span> 允许</label>
+                                            <label class="button button-little "><input name="pintuer" value="no" type="radio"><span class="icon icon-times"></span> 不允许</label>
+                                          </div>
+                                        </div><br /><br />
+                                        <label >是否允许别人在“发现-搜索”里发现我</label>
+                                        <div class="field margin-big-left" style="display:inline">
+                                          <div class="button-group radio">
+                                            <label class="button button-little active"><input name="pintuer" value="yes" checked="checked" type="radio"><span class="icon icon-check"></span> 允许</label>
+                                            <label class="button button-little "><input name="pintuer" value="no" type="radio"><span class="icon icon-times"></span> 不允许</label>
+                                          </div>
+                                        </div><br /><br />
+                                        <label >是否接收漂流瓶</label>
+                                        <div class="field margin-big-left" style="display:inline">
+                                          <div class="button-group radio">
+                                            <label class="button button-little active"><input name="pintuer" value="yes" checked="checked" type="radio"><span class="icon icon-check"></span> 接收</label>
+                                            <label class="button button-little "><input name="pintuer" value="no" type="radio"><span class="icon icon-times"></span> 拒绝</label>
+                                          </div>
+                                        </div><br /><br />
+                                        
+                                        <label >每天至多收到多少位新朋友的私信</label>
+                                        <input type="text" class="input input-small margin-big-left" style="display:inline; width:100px" placeholder="默认50" /> 
+                                    </div>
                               <br />
                               <button class="button   bg-green padding-left padding-right"><span class="icon-check"></span>&nbsp;确认修改</button>
                               </div>
                         </div>     
-                        <!--其他设置-->
-                        <div id="setHead" class="panel border-sub layout_left bg-white " style="margin-top:100px;"> 
-                              <div class="panel-head  border-sub bg-sub "><strong >其他设置</strong>
-                              		
-                              </div>
-                              <div class="panel-body">面板内容
-                              <br />
-                              <button class="button   bg-green padding-left padding-right"><span class="icon-check"></span>&nbsp;确认修改</button>
-                              </div>
-                        </div>     
+                        <!--其他设置 暂时去掉-->
+                           
                         <!--实名认证-->
                         <div id="setHead" class="panel border-sub layout_left bg-white " style="margin-top:100px;"> 
                               <div class="panel-head  border-sub bg-sub "><strong >实名认证</strong>
                               		
                               </div>
-                              <div class="panel-body">面板内容
+                              <div class="panel-body">
+                              		<label class="label text-main">我们想过很多种实名认证的办法，最后选择使用学号和密码在教务管理系统进行验证的方式。我们承诺不会保存您的学号和密码，只获取学号和密码是否匹配这一结果。</label>
+                              
+                              <label class="label">学号：</label>
+                              <input type="text" class="input" placeholder="" />
                               <br />
-                              <button class="button   bg-green padding-left padding-right"><span class="icon-check"></span>&nbsp;确认修改</button>
+                              <label class="label">密码：</label>
+                              <input type="text" class="input" placeholder="" />
+                              <br />
+                              
+                              <button class="button   bg-green padding-left padding-right"><span class="icon-check"></span>&nbsp;获取验证结果</button>
                               </div>
                         </div>
                     

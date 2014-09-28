@@ -24,12 +24,30 @@ img.dynamic_img_small {
 				max-height:150px; max-width:150px;}
 img.dynamic_img_big {
 				max-height:220px; max-width:330px;}
+img.dynamic_img_maincontent {
+				width:464px;}
+div.dynamic_div_super {
+				width:484px;}
 div.dynamic_btn_group {
 			    position:absolute; right:10px;}
 div.relactive { 
 				position:relative;}
 img.point {
-				cursor:pointer;} 
+				cursor:pointer;}
+a.point {
+				cursor:pointer;}
+div.point {
+				cursor:pointer;}
+label.point {
+				cursor:pointer;}
+li.point {
+				cursor:pointer;}
+img.upload {  /*上传的图片预览的图片的样式*/
+	max-height:150px;max-width:150px; }
+span.upload_delete { /*上传的图片的删除按钮*/
+	float:right; margin-top:5px; margin-right:5px; position:relative }
+div.divComment {
+				 
 
 /*如下为QQ表情的样式*/
  .comment{width:680px; margin:20px auto; position:relative} 
