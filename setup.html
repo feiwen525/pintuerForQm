@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拼图初始模板</title>
+<link rel="stylesheet" type="text/css" href="pintuer.css" />
+<script src="jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="pintuer.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="NewIndex.css" />
+<script src="croppic.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="croppic.css" />
+
+</head>
+
+<body>
+	<div class="container radius-none" >
+     	 	<!--导航栏-->
+            <div id="nav_fixed" style="height:40px">
+        	<button class="button icon-navicon margin-small-bottom" data-target="#nav-bg1"></button>
+			<div class="bg-sub bg-inverse  nav-navicon text-big " id="nav-bg1">
+			  <ul class="nav nav-inline nav-menu  clearfix ">
+                  <li class="nav-head text-large float-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;青檬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                  <li class="active float-left"><a href="#"><span class="icon-comments-o"></span>&nbsp;动态</a></li>
+                  <li class="float-left"><a href="#"><span class="icon-group (alias)"></span>&nbsp;一起</a></li>
+                  <li class="float-left"><a href="#"><span class="icon-search"></span>&nbsp;发现</a></li>
+                  <li class="float-left"><a href="#"><span class="icon-list-ul"></span>&nbsp;应用<span class="arrow"></span></a>
+                    <ul class="drop-menu">
+                      <li><a href="#"><span class="icon-envelope-o"></span>&nbsp;桃花信</a></li>
+                      <li><a href="#"><span class="icon-rmb (alias)"></span>&nbsp;&nbsp;跳蚤市场</a></li>
+                      <li><a href="#"><span class="icon-compass"></span>&nbsp;失物招领</a></li>
+                      <li><a href="#"><span class="icon-bullhorn"></span>&nbsp;重要资讯</a></li>
+                      <li><a href="#"><span class="icon-file-text-o"></span>&nbsp;成绩查询</a></li> 
+                    </ul>
+                  </li> 
+                  <a id="nav_space"></a>
+                  <li class="nav-more"><a href="#"><span class="icon-trophy"></span></a>
+                  	<ul class="drop-menu"><li><a href="#">获取高级功能，<br />点亮荣誉勋章。<br />仅需10秒，<br />免费开通会员！</a></li></ul>
+                  </li>
+                  <li class="nav-more"><a href="#"><span class="icon-gear (alias)"></span></a>
+                  	<ul class="drop-menu text-default">
+                      <li><a href="#">头像</a></li>
+                      <li><a href="#">签名 生活照</a></li>
+                      <li><a href="#">个人信息</a></li>
+                      <li><a href="#">隐私设置</a></li>
+                      <li><a href="#">其他设置</a></li>
+                      <li><a href="#">实名认证</a></li>
+                      <li><a href="#">我的二维码</a></li>
+                      <li><a href="#">关于我们</a></li>
+                      <li><a href="#">退出登录</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-more" ><a class="text-default" href="#"><img src="head.jpg" width="30"> 范冰冰的超级粉丝</a></li>
+			  </ul>
+		    </div> 
+            </div>
+            <!--背景封面图-->
+            <div id="header_bg" ></div>
+            <!--40px空白--> 
+             		<br/><br/><br/> 
+            <!--消息提醒-->
+            <div class="button bg-sub badge-corner float-right margin-large-right ">新消息<span class="badge bg-red">8</span></div>
+            			 
+            <!--颜色-->
+            <div class="main_color">
+            	<!--宽度-->
+            	<div class="main_width">
+                	<!--右边布局-->
+                    <div class="layout_right border bg-white padding" style="margin-top:100px;">
+                    	<button class="button icon-navicon" data-target="#nav-tabs1"></button> 
+                            <ul class="nav nav-tabs nav-navicon" id="nav-tabs1">
+                              <li class="active"><a class="text-sub" href="#">头像设置</a></li>
+                              <li><a href="#">签名&nbsp;生活照</a></li>
+                              <li><a href="#">个人信息</a></li>
+                              <li><a href="#">隐私设置</a></li>
+                              <li><a href="#">其他设置</a></li>
+                              <li><a href="#">实名认证</a></li> 
+                            </ul>
+                    </div>
+                    <!--左边布局--> 
+						<!--头像设置-->
+                        <div id="setHead" class="panel border-sub layout_left bg-white " style="margin-top:100px;"> 
+                              <div class="panel-head  border-sub bg-sub "><strong >头像设置</strong>
+                              </div>
+                              <div class="panel-body">
+                              		
+                                    <div id="yourId"></div>
+                              	
+                              
+                              
+                              
+                              
+                              <br />
+                              <button class="button   bg-green padding-left padding-right"><span class="icon-check"></span>&nbsp;确认修改</button>
+                              </div>
+                        </div>
+                        <!--签名 生活照-->
+                        <div id="setSignature" class="panel border-sub layout_left bg-white " style="margin-top:100px;">                    
+                        	  <div class="panel-head  border-sub bg-sub bg-inverse"><strong>签名&nbsp;生活照</strong></div>
+                              <div class="panel-body ">
+                              		<form>
+                                      <label class="label">签名</label><textarea rows="5" class="input" placeholder="大笔一挥，留下您的签名。(少于140字)"></textarea>
+                                      <br />
+                                      <label class="label">生活照</label>
+                                      		<img class="lifeImage radius img-border " src="lifephoto.jpg" />
+                                            <a class="button button-small input-file bg-green margin-left" href="javascript:void(0);">
+                                            	+ 浏览文件
+                                            <input size="100" type="file" name="logo" />
+                                       		</a><br /><br />
+                                            <button class="button  bg-green padding-left padding-right"><span class="icon-check"></span>&nbsp;确认修改</button>
+                                      		
+                                    </form>
+                              </div>
+                        </div>     
+                        <!--个人信息-->
+                        <div id="setHead" class="panel border-sub layout_left bg-white " style="margin-top:100px;"> 
+                              <div class="panel-head  border-sub bg-sub "><strong >个人信息</strong>
+                              		
+                              </div>
+                              <div class="panel-body">
+								  	<label class="label">生日：</label>
+                                    <tr><td>
+                                            <select class="input" size="1" name="calendar" id="calendar" style="width:100px; display:inline" onFocus="" onChange="">
+                                                <option>公历</option>
+                                                <option>农历</option>
+                                            </select>&nbsp;
+                                            <select class="input" size="1" name="year" id="year" style="width:100px; display:inline" onfocus="years('year',new Date().getFullYear()),change_date()" onchange="change_date()"></select>&nbsp;
+                                            <select class="input" size="1" name="month" id="month" style="width:100px; display:inline" onfocus="months(),change_date()" onchange="change_date()"></select>&nbsp;
+                                            <select class="input" size="1" name="date" id="date" style="width:100px; display:inline" ></select>
+                                    </td></tr> <br /><br> 
+                                    <label class="label">家乡：</label>
+                                    <form style="display:inline;" action="" method=post name="creator" enctype="multipart/form-data">
+                                        <select class="input" name="province" style="width:100px; display:inline" onChange = "select()"></select>
+                                        <select class="input" name="city" style="width:100px;margin-left:5px;; display:inline " onChange = "select()"></select>
+                                    </form> <br /><br />
+                                    <label class="label">学院：</label>
+                                    <select class="input" size="1" name="college" id="college" style="width:150px">
+                                        <option></option>
+                                        <option>哲史院</option>
+                                        <option>商学院</option>
+                                        <option>公共管理学院</option>
+                                        <option>旅游管理学院</option>
+                                        <option>法学院</option>
+                                        <option>知识产权学院</option>
+                                        <option>马克思主义学院</option>
+                                        <option>文学与新闻学院</option>
+                                        <option>外国语学院</option>
+                                        <option>数学与计算科学学院</option>
+                                        <option>材料与光电物理学院</option>
+                                        <option>化学学院</option>
+                                        <option>化工学院</option>
+                                        <option>机械工程学院</option>
+                                        <option>信息工程学院</option>
+                                        <option>土木工程与力学学院</option>
+                                        <option>大学英语教学部</option>
+                                        <option>体育教学部</option>
+                                        <option>艺术学院</option>
+                                        <option>国际交流学院</option>
+                                        <option>兴湘学院</option>
+                                        <option>能源工程学院</option>
+                                        <option>职业技术学院</option> 
+                                    </select><br /> 
+                                    <label class="label">入学：</label>
+                                    <select class="input" size="1" name="college" id="college" style="width:100px">
+                                        <option></option>
+                                        <option>2014</option>
+                                        <option>2013</option>
+                                        <option>2012</option>
+                                        <option>2011</option>
+                                        <option>2010</option>
+                                        <option>2009</option>
+                                        <option>2008</option>
+                                        <option>2007</option>
+                                        <option>更早</option>
+                                    </select><br />
+                                    <label class="label">兴趣：</label>
+                                    	<div class="button-group button-small border-main  checkbox ">
+                                          <label class="button button-small active"><input name="pintuer" value="1" type="checkbox" checked="checked">运动</label>
+                                          <label class="button button-small"><input name="pintuer" value="2" type="checkbox">听歌</label>
+                                          <label class="button button-small"><input name="pintuer" value="3" type="checkbox">看电影</label>
+                                          <label class="button button-small"><input name="pintuer" value="4" type="checkbox">玩电脑</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">阅读</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">旅游</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">舞蹈</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">绘画</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">旅游</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">舞蹈</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">绘画</label>
+                                        </div><br /><br />
+                                    <label class="label">标签：</label>                                 		
+                                    	<div class="button-group  button-small border-main  checkbox ">
+                                          <label class="button button-small active"><input name="pintuer" value="1" type="checkbox" checked="checked">娇小</label>
+                                          <label class="button button-small"><input name="pintuer" value="2" type="checkbox">御姐</label>
+                                          <label class="button button-small"><input name="pintuer" value="3" type="checkbox">高瘦</label>
+                                          <label class="button button-small"><input name="pintuer" value="4" type="checkbox">壮汉</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">文艺青年</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">理科生</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">工科生</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">感性</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">理性</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">运动</label>
+                                          <label class="button button-small"><input name="pintuer" value="5" type="checkbox">IT男</label>
+                                        </div><br /><br />
+                                  <button class="button   bg-green padding-left padding-right"><span class="icon-check"></span>&nbsp;确认修改</button>
+                              </div>
+                        </div>     
+                        <!--隐私设置-->
+                        <div id="setHead" class="panel border-sub layout_left bg-white " style="margin-top:100px;"> 
+                              <div class="panel-head  border-sub bg-sub "><strong >隐私设置</strong>
+                              		
+                              </div>
+                              <div class="panel-body">面板内容
+                              <br />
+                              <button class="button   bg-green padding-left padding-right"><span class="icon-check"></span>&nbsp;确认修改</button>
+                              </div>
+                        </div>     
+                        <!--其他设置-->
+                        <div id="setHead" class="panel border-sub layout_left bg-white " style="margin-top:100px;"> 
+                              <div class="panel-head  border-sub bg-sub "><strong >其他设置</strong>
+                              		
+                              </div>
+                              <div class="panel-body">面板内容
+                              <br />
+                              <button class="button   bg-green padding-left padding-right"><span class="icon-check"></span>&nbsp;确认修改</button>
+                              </div>
+                        </div>     
+                        <!--实名认证-->
+                        <div id="setHead" class="panel border-sub layout_left bg-white " style="margin-top:100px;"> 
+                              <div class="panel-head  border-sub bg-sub "><strong >实名认证</strong>
+                              		
+                              </div>
+                              <div class="panel-body">面板内容
+                              <br />
+                              <button class="button   bg-green padding-left padding-right"><span class="icon-check"></span>&nbsp;确认修改</button>
+                              </div>
+                        </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                </div><!--main-width-->
+            </div><!--main-color-->
+             
+            
+            
+            
+            
+            
+            
+            
+    
+
+	</div><!--！所有-->
+<script>
+	var cropperHeader = new Crop('yourId');
+	var cropperHeader = new Crop('yourId', cropperOptions);
+					
+		var cropperOptions = {
+			uploadUrl:'path_to_your_image_proccessing_file.php'
+		}
+
+
+
+</script>
+
+
+
+
+
+
+<script src="birthday.js" type="text/javascript" ></script>
+<script src="hometown.js" type="text/javascript" ></script>
+</body>
+</html>
